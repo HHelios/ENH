@@ -1,0 +1,371 @@
+/* https://skateboard.webflow.io/ */
+
+/* https://unsplash.com/photos/MTwzYSHnoXE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
+
+@font-face {
+    font-family: 'Fox';
+    src: url('../Fonts/FoxAndBower.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Sonora';
+    src: url('../Fonts/Sonorous-Rough.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sonora', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Format */
+    
+    /* Style */
+}
+
+
+header {
+    /* Format */
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    top: 0;
+
+    width: inherit;
+    min-height: 120px;
+
+    /* Style */
+    background-color: #fff;
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 20%);
+    z-index: 100;
+}
+
+header .Wrapper {
+    height: inherit;
+    padding-inline: 2rem;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .Hero {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Fox', sans-serif;
+    flex-direction: Column;
+    align-items: center;
+    
+}
+
+header .Hero:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: .25s;
+}
+
+header span {
+    font-size: 14px;
+}
+
+
+main {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+footer {
+    /* Format */
+    display: grid;
+    place-items: center;
+    height: 10vh;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    display: none;
+}
+
+.text {
+    font-size: 1.5rem;
+    line-height: 2;
+    text-indent:5%;
+    margin-block: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-block: 2rem;
+    border-bottom: #333 2px solid;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.⬜ { /* Card  */
+    /* Format*/
+    max-width: 1200px;
+    height: fit-content;
+    padding-inline: 2rem;
+    padding-block-start: 3rem;
+    padding-block-end: 6rem;
+    margin-inline: auto;
+
+
+    /* Style*/
+    background-color: white;
+}
+
+.⬜ .Column {
+    /* Format*/
+    position: relative;
+    height: 400px;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.⬜ .Column div {
+    /* Format*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    padding-inline: 4rem;
+    padding-block: 1rem;
+
+    /* Style*/
+    color: #fff;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+    user-select: none;
+}
+
+
+.⬜ .Column div .Hero {
+    font-size: 3.8rem;
+    word-spacing: 100rem;
+    font-weight: 1000;
+    line-height: 4.5rem;
+    text-align: center;
+    font-family: 'Fox', sans-serif;
+    opacity: 0;
+    transition: 1s;
+}
+
+.⬜ .Column .Hero:hover {
+    opacity: 1;
+}
+
+
+
+img {
+    width: 100%;
+    scale: 1.1;
+    left: 0;
+    top: 0;
+    object-fit:contain;
+    pointer-events: none
+}
+
+
+.Breaker {
+    padding: .5vh;
+    display: grid;
+    place-items: center;
+    background-color: #333;
+    color: #fff;
+    font-size: 13px;
+
+}
+
+.Breaker p {
+    font-family: 'Fox', sans-serif;
+}
+
+.Grit {
+    -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+}
+
+.💪 {  /* Flex */
+    display: flex;
+}
+
+
+.🧭 { /* Navigation */
+    /* Format*/
+    width: fit-content;
+    height: inherit;
+    flex-direction: row;
+    place-items: center;
+    /* Style*/
+    list-style: none;
+}
+
+.📍 {  /*  */
+    /* Format*/
+    width: fit-content;
+    padding: .75rem;
+    margin: .5rem;
+    border-radius: .5rem;
+
+    /* Style*/
+    background-color: white;
+    color: #333;
+    font-family: 'Fox', sans-serif;
+    transition: .25s;
+    font-size: 1.1rem;
+}
+
+ul:hover .📍:not(:hover) { /* Cards Grow When Footer Hovered  */
+    transform: scale(1.05);
+}
+
+ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
+    transform: scale(1);
+}
+
+.📍:hover { /* Cards Grow When Hovered  */
+    opacity: .9;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.📍.active {
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.🔳 {  /*  */
+    /* Format*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* Style*/
+    background-image: linear-gradient(90deg,rgba(0,0,0,.9),rgba(100, 100, 100, 0.2));
+    z-index: 2;
+    pointer-events: none
+}
+
+.buy-button {
+    background-color: #9603009b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 1s;
+  }
+  
+  .buy-button:hover {
+    background-color: #b10a0a;
+  }
+
+  .video-container {
+    margin: 0 auto; /* Center the container */
+    width: 800px; /* Adjust width as needed */
+    border-radius: 10px; /* Round the corners */
+    overflow: hidden; /* Hide overflow content */
+    position: relative; /* For positioning the placeholder */
+    text-align: center;
+  }
+
+  .reasons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .reasons li {
+    margin: 1em 0;
+    font-weight: bold;
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+  }
+
+.timeline-container {
+    margin: 0 auto;
+    width: 80%;
+    padding: 2em;
+}
+
+.timeline-container h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.timeline-date {
+    width: 100px;
+    text-align: right;
+    padding-right: 1em;
+    font-weight: bold;
+}
+
+.timeline-content {
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.timeline-content h3 {
+    margin-bottom: 0.5em;
+}
+
+.rounded-image {
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    margin-block: 4rem;
+    border-radius: 10px; /* Sets the corner radius for rounded borders */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    width: 40%;
+    aspect-ratio: 1/1;
+  }
+  
