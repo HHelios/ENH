@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Sonora';
-    src: url('Sonorous-Rough.otf') format('opentype');
+    src: url('./Sonorous-Rough.otf') format('opentype');
 }
 
 * {
